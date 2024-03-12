@@ -1,0 +1,30 @@
+Sistema de Gestión de Productos para Tienda en Línea
+Este proyecto consiste en un software desarrollado en Java para gestionar los productos de una tienda en línea de comercio electrónico. El sistema permite mostrar, buscar, agregar, modificar, eliminar productos y realizar compras, manteniendo actualizado el stock de los productos vendidos.
+
+Funcionalidades
+Mostrar Productos Disponibles: Esta funcionalidad permite mostrar todos los productos disponibles en la tienda, incluyendo su nombre, descripción, precio, stock y categoría.
+
+Buscar Producto: Permite buscar un producto por su nombre o categoría.
+
+Agregar Producto: Permite agregar un nuevo producto a la lista de productos de la tienda, especificando su nombre, descripción, precio, stock y categoría.
+
+Modificar Producto: Permite modificar la información de un producto existente, incluyendo su nombre, descripción, precio, stock y categoría.
+
+Eliminar Producto: Permite eliminar un producto de la lista de productos de la tienda.
+
+Realizar Compra: Permite realizar una compra, disminuyendo el stock del producto vendido.
+
+Clases del Proyecto
+El proyecto consta de las siguientes clases principales:
+
+1. Producto
+Representa un producto en la tienda, con atributos como nombre, descripción, precio, stock y categoría. Incluye métodos para acceder y modificar estos atributos.
+
+2. TiendaOnline
+Clase principal que contiene la lógica para gestionar los productos. Incluye métodos para mostrar, buscar, agregar, modificar, eliminar productos y realizar compras.
+
+3. Cliente
+Representa a un cliente que realiza una compra en la tienda. Puede estar asociado a una compra específica.
+
+4. Compra
+Representa una compra realizada por un cliente, con una lista de productos comprados y la información de la compra.
