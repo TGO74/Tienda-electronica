@@ -2,35 +2,22 @@ public class Test {
 
     public static void main(String[] args) {
 
-        //Crear tienda
+        // Crear un objeto de la clase TIENDA
+
         TiendaElectronica tienda = new TiendaElectronica();
-        tienda.setNombre("Tienda de Electronica");
+        tienda.setNombre("Tienda Electronica");
         tienda.setDireccion("Calle 123");
-        tienda.setTelefono("1234567890");
+        tienda.setTelefono("1234567");
+        tienda.setEmail("DQDAFA");
+        tienda.setHorario("Lunes a Viernes de 8:00 a 18:00");
 
-        //Crear productos
-        Producto producto1 = new Producto(1, "Laptop", 1000, "Laptop de 15 pulgadas", 10, "Computadoras");
-        Producto producto2 = new Producto(2, "Mouse", 20, "Mouse inalambrico", 50, "Accesorios");
-        Producto producto3 = new Producto(3, "Teclado", 30, "Teclado inalambrico", 30, "Accesorios");
+        //prueba agregar producto clase tienda
 
-        //Crear cliente
-        Cliente cliente = new Cliente("Juan", "Perez", "tjfigjfdij");
+        tienda.agregarProducto();
 
-        //Crear carrito de compras del cliente
-        Producto[] carrito = new Producto[20];
+        //prueba mostrar producto clase tienda
 
-        //Agregar productos al carrito con el metodo agregarProducto de la clase Cliente
-        cliente.agregarProducto(producto1, 2);
-        cliente.agregarProducto(producto2, 1);
-
-        //Realizar compra con el metodo realizarCompra de la clase Cliente
-
-        cliente.realizarCompra(carrito, tienda);
-
-        //Mostrar compras del cliente
-
-        cliente.mostrarCompras();
+        tienda.mostrarProductosVenta();
 
     }
-
 }

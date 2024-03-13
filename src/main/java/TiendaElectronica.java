@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+
+
 public class TiendaElectronica {
 
     //Atributos
@@ -18,6 +20,7 @@ public class TiendaElectronica {
         this.telefono = telefono;
         this.email = email;
         this.horario = horario;
+        this.productos = new Producto[10000];
     }
 
     //Getters y Setters
@@ -97,9 +100,26 @@ public class TiendaElectronica {
         }
     }
 
-    //Metodo para agregar un producto
+    //Metodo para agregar un producto, utilizando el constructor de la clase Producto. Es decir, pidiendo información al usuario
 
-    public void agregarProducto(Producto producto) {
+    public void agregarProducto() {
+        System.out.println("Ingrese el nombre del producto: ");
+        String nombre = Leer.dato();
+
+        System.out.println("Ingrese el precio del producto: ");
+        double precio = Double.parseDouble(Leer.dato());
+
+        System.out.println("Ingrese la descripción del producto: ");
+        String descripcion = Leer.dato();
+
+
+        System.out.println("Ingrese el stock del producto: ");
+        int stock = Integer.parseInt(Leer.dato());
+
+        System.out.println("Ingrese la categoria del producto: ");
+        String categoria = Leer.dato();
+
+        Producto producto = new Producto(nombre, precio, descripcion, stock, categoria);
         for (int i = 0; i < productos.length; i++) {
             if (productos[i] == null) {
                 productos[i] = producto;
@@ -107,9 +127,6 @@ public class TiendaElectronica {
             }
         }
     }
-
-    @Test
-
 
     //Metodo para eliminar un producto
 
@@ -138,6 +155,16 @@ public class TiendaElectronica {
     public void mostrarProductosPorCategoria(String categoria) {
         for (Producto producto : productos) {
             if (producto.getCategoria().equals(categoria)) {
+                System.out.println(producto.toString());
+            }
+        }
+    }
+
+    //Mostrar todos los producto a la venta
+
+    public void mostrarProductosVenta(){
+        for (Producto producto : productos) {
+            if (producto.getStock() > 0) {
                 System.out.println(producto.toString());
             }
         }

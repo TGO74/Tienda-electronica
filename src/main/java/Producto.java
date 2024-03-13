@@ -14,7 +14,7 @@ public class Producto {
     private int cantidad;
 
     //Constructor
-    public Producto(int id, String nombre, double precio, String descripcion, int stock, String categoria) {
+    public Producto(String nombre, double precio, String descripcion, int stock, String categoria) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -24,6 +24,7 @@ public class Producto {
         this.cantidad = 0;
 
     }
+
 
     //Getters y Setters
     public int getId() {

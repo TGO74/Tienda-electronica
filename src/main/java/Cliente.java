@@ -162,8 +162,7 @@ public class Cliente {
 
     //Metodo que pide el metodo de pago y retorna el metodo ingresado
     public String pedirMetodoDePago(){
-        System.out.println("Ingrese su metodo de pago: ");
-        System.out.println(" Tarjeta de credito, tarjeta de debito, efectivo");
+        System.out.println("Ingrese su metodo de pago: Tarjeta de credito, tarjeta de debito o efectivo");
         String opcion = Leer.dato();
 
 
